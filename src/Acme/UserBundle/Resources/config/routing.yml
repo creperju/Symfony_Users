@@ -1,0 +1,19 @@
+acme_home:
+    pattern: /
+    defaults: { _controller: AcmeUserBundle:Default:index }
+    
+acme_user:
+    pattern:    /validado
+    defaults: { _controller: AcmeUserBundle:Default:validado }
+
+
+
+registro:
+    pattern:    /registro
+    defaults:   { _controller: AcmeUserBundle:Default:registro }
+    
+login_check:
+    pattern:    /login_check
+    
+logout:
+    pattern:    /logout

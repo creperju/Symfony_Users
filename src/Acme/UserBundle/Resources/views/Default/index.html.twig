@@ -1,0 +1,49 @@
+<html>
+    <head><title>HOla</title></head>
+    <body>
+        
+        
+        
+        
+        <div class="col-md-9">
+            <form action="{{ path('login_check') }}" method="post">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="_username" value="{{ last_username }}" />
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="_password" />
+
+    {#
+        añade lo siguiente si quieres redirigir al usuario a una
+        URL concreta después del login (explicado más adelante)#}
+        <input type="hidden" name="_target_path" value="/validado" />
+    
+
+                <button type="submit">login</button>
+            </form>
+        </div>
+    
+    
+    
+    
+    {% if error %}
+            <div class="col-md-3">
+                {{ error.message }}
+            </div>
+        {% endif %}
+        
+        
+        <br/>
+        {{ form(form) }}
+        <br/>
+        
+        
+        <a href="{{ path('registro') }}"><button>Registrar</button></a>
+        
+        
+        
+        
+        
+        
+    </body>
+</html>
